@@ -1,0 +1,7 @@
+.idea
+venv
+__pycache__
+
+logs
+
+test.conf.json

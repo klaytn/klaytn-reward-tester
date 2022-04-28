@@ -1,0 +1,17 @@
+#!/bin/sh
+
+BASEDIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+if [[ ! -d $BASEDIR"/venv" ]]; then
+    python3 -m venv $BASEDIR/venv
+    source $BASEDIR/venv/bin/activate
+    pip install -r $BASEDIR/requirements.txt
+fi
+
+if [ ! -f $BASEDIR"/test.conf.json" ]; then
+    cp $BASEDIR/temp.test.conf.json $BASEDIR/test.conf.json
+fi
+
+if [ ! -d $BASEDIR"/logs" ]; then
+    mkdir $BASEDIR/logs
+fi

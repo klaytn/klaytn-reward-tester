@@ -1,0 +1,5 @@
+{
+    "startBlockNumber": 1,
+    "endBlockNumber": 10000,
+    "target_node": "klaytn_deploy"
+}
